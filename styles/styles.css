@@ -1,16 +1,20 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  background-color: #FFFFFF;
-;
+  background-color: #ffffff;
 }
+.container {
+  max-width: 1440px;
+  padding-top: 120px;
+}
+
 .title {
   width: 306px;
   height: 47px;
   display: flex;
   align-items: center;
-  margin: 120px auto 20px;
-  font-family: Roboto, serif;
+  margin: 0 auto 20px;
+  font-family: Roboto, sans-serif;
   font-size: 40px;
 }
 
@@ -34,5 +38,11 @@
 }
 
 .icon-image {
+  width: 100px;
+  height: 100px;
   margin-bottom: 48px;
+}
+
+.icon-margin {
+  margin-bottom: 122px;
 }
