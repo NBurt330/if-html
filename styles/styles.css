@@ -9,12 +9,12 @@
 .container {
   max-width: 1232px;
   margin: 0 auto;
-  padding-top: 120px;
 }
 
 .title {
   width: 306px;
-  height: 47px;
+  height: 167px;
+  padding-top: 120px;
   display: flex;
   align-items: center;
   margin: 0 auto 20px;
@@ -57,6 +57,14 @@
   background-color: #10367c;
 }
 
+.footer-block {
+  padding: 120px 0;
+  height: 625px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .footer-top {
   display: flex;
   flex-direction: row;
@@ -65,7 +73,6 @@
 
 .footer-column {
   width: fit-content;
-  padding-bottom: 64px;
 }
 
 .footer-headlines {
@@ -101,9 +108,10 @@
 
 .footer-copyright {
   padding-left: 1px;
-  padding-bottom: 120px;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   color: #ffffff;
 }
+
+
