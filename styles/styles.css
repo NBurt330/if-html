@@ -37,6 +37,13 @@
   justify-content: space-between;
 }
 
+.top-header-navigation {
+  width: 343px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .top-header-logo {
   height: 40px;
   width: 205px;
@@ -44,27 +51,39 @@
   background-repeat: no-repeat;
 }
 
-.top-header-right {
-  width: 343px;
+.top-header-lists {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 24px;
 }
 
-.top-header-text {
-  display: flex;
-  gap: 24px;
+.top-header-list {
+  text-decoration: none;
   font-weight: 400;
   font-size: 24px;
   line-height: 28px;
   color: #ffffff;
 }
 
-.top-header-images {
-  display: flex;
-  gap: 24px;
-  align-items: center;
+.top-header-button {
+  height: 30px;
+  width: 30px;
+  background-image: url("../images/Night.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.top-header-account {
+  height: 40px;
+  width: 40px;
+  background-image: url("./../images/AccountCircle.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: none;
 }
 
 .top-header-line {
@@ -152,7 +171,6 @@
   justify-content: space-between;
   align-content: center;
 }
-
 
 .title {
   width: 306px;
