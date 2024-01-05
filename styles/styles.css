@@ -13,23 +13,17 @@
 
 .top {
   min-height: 100vh;
-  background-image: url(./../images/castelmezzano.svg);
+  background-image: url(./../images/castelmezzano.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.top-container {
+.header {
   padding-top: 51px;
-  padding-bottom: 120px;
 }
 
-.top-header {
-  margin-bottom: 196px;
-}
-
-.top-header-top {
-  height: 42px;
+.header__top {
   padding-bottom: 2px;
   display: flex;
   flex-direction: row;
@@ -37,21 +31,19 @@
   justify-content: space-between;
 }
 
-.top-header-navigation {
+.header__logo {
+  width: 205px;
+  height: 40px;
+}
+
+.header__navigation {
   width: 343px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.top-header-logo {
-  height: 40px;
-  width: 205px;
-  background-image: url(./../images/logo_vector.png);
-  background-repeat: no-repeat;
-}
-
-.top-header-lists {
+.header__lists {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -61,7 +53,7 @@
   gap: 24px;
 }
 
-.top-header-list {
+.header__list {
   text-decoration: none;
   font-weight: 400;
   font-size: 24px;
@@ -69,52 +61,77 @@
   color: #ffffff;
 }
 
-.top-header-button {
-  height: 30px;
+.header__button {
   width: 30px;
-  background-image: url("../images/Night.svg");
-  background-size: cover;
-  background-position: center;
+  aspect-ratio: 1 / 1;
 }
 
-.top-header-account {
-  height: 40px;
+.header__account {
   width: 40px;
-  background-image: url("./../images/AccountCircle.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: none;
+  aspect-ratio: 1 / 1;
 }
 
-.top-header-line {
+.header__line {
+  float: right;
+  margin-right: 288px;
   width: 50px;
   height: 4px;
-  margin-left: 894px;
   background-color: #f5bd41;
 }
 
+.top-container {
+  margin-top: 196px;
+  padding-bottom: 120px;
+}
+
 .top-discover {
-  width: 542px;
-  height: 118px;
-  margin-bottom: 100px;
+  margin-bottom: 36px;
   font-weight: 500;
   font-size: 50px;
   line-height: 59px;
   color: #ffffff;
 }
 
-.search {
+.top-search {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin-bottom: 120px;
 }
 
-.search-column {
-  display: flex;
-  flex-direction: column;
+.top-search__background {
+  position: relative;
+  top: 109px;
+  left: 370px;
+  width: clamp(630px, 715px, 60%);
+  height: 64px;
+  background-color: #ffffff;
+  z-index: 1;
 }
 
-.search-label {
+.top-search__column {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.top-search__column--city {
+  width: clamp(278px, 38%, 467px);
+}
+
+.top-search__column--data {
+  width: clamp(249px, 21%, 259px);
+}
+
+.top-search__column--guests {
+  width: clamp(294px, 25.5%, 314px);
+}
+
+.top-search__column--button {
+  width: 15.5%;
+}
+
+.top-search__label {
   padding: 0 0 24px 24px;
   font-weight: 400;
   font-size: 18px;
@@ -122,9 +139,11 @@
   color: #ffffff;
 }
 
-.search-field {
-  height: 64px;
+.top-search__field {
+  padding-top: 22px;
+  padding-bottom: 21px;
   padding-inline-start: 24px;
+  background-color: #ffffff;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
@@ -132,13 +151,28 @@
   border: none;
 }
 
-.search-button {
-  height: 64px;
-  width: 192px;
+.top-search__field--city {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.top-search__field--data {
+  padding-top: 19px;
+  padding-bottom: 18px;
+  border: #f5bd41 solid 3px;
+  border-radius: 8px;
+}
+
+.top-search__field--guests {
+  margin-top: 21px;
+}
+
+.top-search__button {
+  padding-top: 16px;
+  padding-bottom: 16px;
   margin-top: 45px;
   border-radius: 8px;
   background-color: #3077c6;
-  margin-top: 45 px;
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
@@ -146,69 +180,62 @@
   text-align: center;
 }
 
-.city {
-  width: 467px;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-}
-
-.data {
-  width: 259px;
-  border: #f5bd41 solid 3px;
-  border-radius: 8px;
-}
-
-.guests {
-  margin-top: 45px;
-  width: 314px;
-}
-
 .top-apps {
-  width: 270px;
-  height: 40px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
-  align-content: center;
+  justify-content: center;
+  gap: 16px;
 }
 
-.title {
-  width: 306px;
-  height: 167px;
+.top-apps__google-play {
+  width: 135px;
+  height: 40px;
+}
+
+.top-apps__apple-store {
+  width: 120px;
+  height: 40px;
+}
+
+.services__title {
+  max-width: 306px;
   padding-top: 120px;
   display: flex;
   align-items: center;
   margin: 0 auto 20px;
-  font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 40px;
 }
 
-.empty-box {
+.services__empty-box {
   width: 100px;
   height: 4px;
   margin: 0 auto 80px;
   background-color: #f5bd41;
 }
 
-.icons {
+.services__icons {
   display: flex;
   justify-content: space-around;
+  margin-right: -8px;
+  margin-left: -8px;
 }
 
-.icon {
+.services__icon {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 25%;
+  padding: 0 8px;
 }
 
-.icon-image {
+.services__image {
   width: 100px;
-  height: 100px;
+  aspect-ratio: 1 / 1;
   margin-bottom: 48px;
 }
 
-.icon-margin {
+.services__margin {
   font-weight: 400;
   font-size: 24px;
   margin-bottom: 122px;
@@ -218,7 +245,7 @@
   background-color: #10367c;
 }
 
-.footer-block {
+.footer__container {
   padding: 120px 0;
   height: 625px;
   display: flex;
@@ -226,17 +253,22 @@
   justify-content: space-between;
 }
 
-.footer-top {
+.footer__top {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: -8px;
+  margin-right: -8px;
 }
 
-.footer-column {
-  width: fit-content;
+.footer__column {
+  width: calc(100% / 3);
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
-.footer-headlines {
+.footer__headlines {
   font-weight: 500;
   font-size: 20px;
   color: #ffffff;
@@ -244,7 +276,7 @@
   padding-bottom: 24px;
 }
 
-.footer-links {
+.footer__links {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -257,17 +289,12 @@
   line-height: 23px;
 }
 
-.footer-link {
+.footer__link {
   text-decoration: none;
   color: #ffffff;
 }
 
-.footer-column:last-child {
-  padding-left: 60px;
-  padding-right: 168px;
-}
-
-.footer-copyright {
+.footer__copyright {
   padding-left: 1px;
   font-weight: 400;
   font-size: 14px;
