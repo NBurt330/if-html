@@ -184,6 +184,12 @@
           fill="#3077C6"
         />
       </symbol>
+      <symbol id="menu" viewBox="0 0 24 16">
+        <path
+          d="M0 16H24V13.3333H0V16ZM0 9.33333H24V6.66667H0V9.33333ZM0 0V2.66667H24V0H0Z"
+          fill="white"
+        />
+      </symbol>
     </svg>
 
     <div class="top">
@@ -213,6 +219,11 @@
                     </svg>
                   </a>
                 </li>
+                <li class="header__menu">
+                  <svg class="header__menu-button">
+                    <use href="#menu"></use>
+                  </svg>
+                </li>
               </ul>
             </div>
           </div>
@@ -225,44 +236,127 @@
           <p>to live, work or just relax</p>
         </div>
         <div>
-          <div class="top-search__background">
-          </div>
-        <form class="top-search">
-          <div class="top-search__column top-search__column--city">
-            <label for="city" class="top-search__label"
-              >Your destination or hotel name</label
+          <div class="top-search__background"></div>
+          <form class="top-search">
+            <div
+              class="top-search__column top-search__column--city top-search__column--large"
             >
-            <input
-              type="text"
-              id="city"
-              placeholder="New York"
-              class="top-search__field top-search__field--city"
-            />
-          </div>
-          <div class="top-search__column top-search__column--data">
-            <label for="calendar" class="top-search__label"
-              >Check-in — Check-out</label
+              <label for="city" class="top-search__label"
+                >Your destination or hotel name</label
+              >
+              <input
+                type="text"
+                id="city"
+                placeholder="New York"
+                class="top-search__field top-search__field--city"
+              />
+            </div>
+            <div
+              class="top-search__column top-search__column--small col-md-12 col-sm-6"
             >
-            <input
-              type="text"
-              id="calendar"
-              placeholder="Tue 15 Sept — Sat 19 Sept"
-              class="top-search__field top-search__field--data"
-            />
-          </div>
-          <div class="top-search__column top-search__column--guests">
-            <label for="people" class="top-search__label"></label>
-            <input
-              type="text"
-              id="people"
-              placeholder="2 Adults — 0 Children — 1 Room"
-              class="top-search__field top-search__field--guests"
-            />
-          </div>
-          <div class="top-search__column top-search__column--button">
-            <button class="top-search__button">Search</button>
-          </div>
-        </form>
+              <input
+                type="text"
+                placeholder="Your destination or hotel name"
+                class="top-search__field top-search__field--city"
+              />
+            </div>
+            <div
+              class="top-search__column top-search__column--large top-search__column--data"
+            >
+              <label for="calendar" class="top-search__label"
+                >Check-in — Check-out</label
+              >
+              <input
+                type="text"
+                id="calendar"
+                placeholder="Tue 15 Sept — Sat 19 Sept"
+                class="top-search__field top-search__field--data"
+              />
+            </div>
+            <div class="top-search__column--small col-md-12 col-sm-6">
+              <div class="top-search__column top-search__column--data">
+                <label
+                  for="check-in"
+                  class="top-search__label top-search__label--data1"
+                  >Check-in date</label
+                >
+                <input
+                  type="text"
+                  id="check-in"
+                  placeholder="Tue 15 Sept 2020"
+                  class="top-search__field top-search__field--data1"
+                />
+              </div>
+              <div class="top-search__column top-search__column--data">
+                <label
+                  for="check-out"
+                  class="top-search__label top-search__label--data2"
+                  >Check-out date</label
+                >
+                <input
+                  type="text"
+                  id="check-out"
+                  placeholder="Sat 19 Sept 2020"
+                  class="top-search__field top-search__field--data2"
+                />
+              </div>
+            </div>
+            <div
+              class="top-search__column top-search__column--guests top-search__column--large"
+            >
+              <label for="people" class="top-search__label"></label>
+              <input
+                type="text"
+                id="people"
+                placeholder="2 Adults — 0 Children — 1 Room"
+                class="top-search__field top-search__field--guests"
+              />
+            </div>
+            <div class="top-search__column--small-nogap col-md-12 col-sm-6">
+              <div class="top-search__column top-search__column--guests">
+                <label
+                  for="adults"
+                  class="top-search__label top-search__label--guests1"
+                  >Adults</label
+                >
+                <input
+                  type="text"
+                  id="adults"
+                  placeholder="2"
+                  class="top-search__field top-search__field--guests1"
+                />
+              </div>
+              <div class="top-search__line-first"></div>
+              <div class="top-search__column top-search__column--guests">
+                <label for="children" class="top-search__label">Children</label>
+                <input
+                  type="text"
+                  id="children"
+                  placeholder="0"
+                  class="top-search__field"
+                />
+              </div>
+              <div class="top-search__line-second"></div>
+              <div class="top-search__column top-search__column--guests">
+                <label
+                  for="rooms"
+                  class="top-search__label top-search__label--guests3"
+                  >Rooms</label
+                >
+                <input
+                  type="text"
+                  id="rooms"
+                  placeholder="1"
+                  class="top-search__field top-search__field--guests3"
+                />
+              </div>
+            </div>
+            <div
+              class="top-search__column top-search__column--button col-md-12 col-sm-6"
+            >
+              <button class="top-search__button">Search</button>
+            </div>
+          </form>
         </div>
         <div class="top-apps">
           <div>
@@ -280,36 +374,39 @@
       <div class="services__title">What do we offer</div>
       <div class="services__empty-box"></div>
       <div class="services__icons">
-        <div class="services__icon">
+        <div class="services__icon col-lg-3 col-md-6 col-sm-6">
           <svg class="services__image">
             <use href="#headset-mic-outlined"></use>
           </svg>
-          <span class="services__margin">Support 24&#47;7</span>
+          <span class="services__label">Support 24&#47;7</span>
         </div>
-        <div class="services__icon">
+        <div class="services__icon col-lg-3 col-md-6 col-sm-6">
           <svg class="services__image">
             <use href="#forum-outlined"></use>
           </svg>
-          <span class="services__margin">Communicate directly</span>
+          <span class="services__label">Communicate directly</span>
         </div>
-        <div class="services__icon">
+        <div class="services__icon col-lg-3 col-md-6 col-sm-6">
           <svg class="services__image">
             <use href="#devices-outlined"></use>
           </svg>
-          <span class="services__margin">Book online</span>
+          <span class="services__label">Book online</span>
         </div>
-        <div class="services__icon">
+        <div class="services__icon col-lg-3 col-md-6 col-sm-6">
           <svg class="services__image">
             <use href="#thumb-up-outlined"></use>
           </svg>
-          <span class="services__margin">Real guest reviews</span>
+          <span class="services__label">Real guest reviews</span>
         </div>
       </div>
     </div>
     <footer class="footer">
       <div class="container footer__container">
+        <svg class="footer__logo">
+          <use href="#logo"></use>
+        </svg>
         <div class="footer__top">
-          <div class="footer__column">
+          <div class="footer__column col-lg-4 col-md-4 col-sm-6">
             <h3 class="footer__headlines">About</h3>
             <ul class="footer__links">
               <li>
@@ -326,7 +423,7 @@
               </li>
             </ul>
           </div>
-          <div class="footer__column">
+          <div class="footer__column col-lg-4 col-md-4 col-sm-6">
             <h3 class="footer__headlines">Property types</h3>
             <ul class="footer__links">
               <li>
@@ -349,7 +446,7 @@
               </li>
             </ul>
           </div>
-          <div class="footer__column">
+          <div class="footer__column col-lg-4 col-md-4 col-sm-6">
             <h3 class="footer__headlines">Support</h3>
             <ul class="footer__links">
               <li>
