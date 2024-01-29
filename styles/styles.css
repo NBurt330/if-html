@@ -147,16 +147,20 @@
   height: 16px;
 }
 
-.header__link:hover::after {
+.header__link::after {
   display: block;
   content: "";
-  width: 84.75%;
+  width: 0;
   height: 4px;
   background-color: var(--accent-first);
   position: absolute;
   bottom: -12px;
   right: calc(50% - 84.75% / 2);
-  transition: all 200ms ease-in-out;
+  transition: all 600ms ease-out;
+}
+
+.header__link:hover::after {
+  width: 84.75%;
 }
 
 .top-container {
@@ -518,6 +522,7 @@
   height: 48px;
   padding-top: 13px;
   padding-bottom: 13px;
+  background-color: var(--main-color);
   border-radius: 8px;
   border: 1px solid var(--accent-second);
   font-weight: 400;
